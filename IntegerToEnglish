@@ -1,0 +1,24 @@
+class Solution:
+    def numberToWords(self, num: int) -> str:
+        strings = {1: "One", 2: "Two", 3: "Three", 4: "Four", 5: "Five", 6: "Six", 7: "Seven", 8: "Eight", 9: "Nine", 10: "Ten", 11: "Eleven", 12: "Twelve", 13: "Thirteen", 14: "Fourteen",15: "Fifteen", 16: "Sixteen", 17: "Seventeen", 18: "Eighteen", 19: "Nineteen",20: "Twenty", 30: "Thirty", 40: "Forty", 50: "Fifty", 60: "Sixty", 70: "Seventy", 80: "Eighty", 90: "Ninety"}
+        def recursive(curr: int) -> str:
+            if curr >= 10**9:
+                new_val = curr // (10**9)
+                return recursive(new_val) + " Billion" + recursive(curr - (new_val*(10**9)))
+            elif curr >= 10**6:
+                new_val = curr // (10**6)
+                return recursive(new_val) + " Million" + recursive(curr - (new_val*(10**6)))
+            elif curr >= 10**3:
+                new_val = curr // (10**3)
+                return recursive(new_val) + " Thousand" + recursive(curr - (new_val*(10**3)))
+            elif curr >= 100:
+                new_val = curr // 100
+                return recursive(new_val) + " Hundred" + recursive(curr - (new_val * 100))
+            elif curr >= 20:
+                new_val = (curr // 10) * 10
+                return " " + strings[new_val] + recursive(curr - (new_val))
+            elif curr > 0:
+                return " "  + strings[curr]
+            else:
+                return ""
+        return "Zero" if num == 0 else recursive(num).strip()
