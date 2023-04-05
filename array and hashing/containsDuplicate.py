@@ -1,5 +1,5 @@
-# LEET CODE LINK : https://leetcode.com/problems/contains-duplicate/description/
 
+# LEET CODE LINK : https://leetcode.com/problems/contains-duplicate/description/
 
 class Solution:
     def containsDuplicate(self, nums):
