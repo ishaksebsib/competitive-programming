@@ -1,7 +1,7 @@
 # LEETCODE LINK : https://leetcode.com/problems/first-unique-character-in-a-string/
 
 class Solution:
-    def firstUniqChar(self, s: str) -> int:
+    def firstUniqChar(self, s):
         data = {}
         for i,d in enumerate(s):
             if d in data.keys():
