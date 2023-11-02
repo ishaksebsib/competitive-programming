@@ -1,5 +1,13 @@
+# LINK : 
 
-# LEET CODE LINK : https://leetcode.com/problems/contains-duplicate/description/
+# MY WAY 
+
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        return len(set(nums)) != len(nums)
+
+
+# A Better Way 
 
 class Solution:
     def containsDuplicate(self, nums):
@@ -9,4 +17,5 @@ class Solution:
                 return True
             mySet.add(i)
         return False
+
 
