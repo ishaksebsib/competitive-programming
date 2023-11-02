@@ -17,3 +17,12 @@ class Solution:
                 return False
 
         return True
+
+
+    # My First Approch 
+
+    class Solution:
+        def isAnagram(self, s: str, t: str) -> bool:
+            if len(s) != len(t):
+                return False
+            return sorted(s) == sorted(t)
