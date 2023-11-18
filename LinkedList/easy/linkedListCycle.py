@@ -1,5 +1,6 @@
 # LINK : https://leetcode.com/problems/linked-list-cycle/
 
+
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
         fast = head
