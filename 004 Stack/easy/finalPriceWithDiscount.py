@@ -2,7 +2,7 @@
 
 class Solution:
     def finalPrices(self, prices: List[int]) -> List[int]:
-        stack = []
+         stack = []
         
         for i in range(len(prices)):
             stack.append(prices[i])
@@ -11,4 +11,4 @@ class Solution:
                     stack[-1] = prices[i] - prices[j]
                     break
                     
-        return stack
+        return stack 
