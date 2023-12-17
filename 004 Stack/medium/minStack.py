@@ -12,7 +12,6 @@ class MinStack:
             self.min.append(val)
         elif val <= self.getMin():
             self.min.append(val)
-            
         self.stack.append(val)
 
     def pop(self) -> None:
