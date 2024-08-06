@@ -1,15 +1,18 @@
-# LINK : 
+# LINK : https://leetcode.com/problems/contains-duplicate/ 
 
 # MY WAY 
 
-class Solution:
+from typing import List
+
+
+class Solution1:
     def containsDuplicate(self, nums: List[int]) -> bool:
         return len(set(nums)) != len(nums)
 
 
 # A Better Way 
 
-class Solution:
+class Solution2:
     def containsDuplicate(self, nums):
         mySet = set()
         for i in nums:
